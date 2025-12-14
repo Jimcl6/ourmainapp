@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class ExampleController extends Controller
 {
     public function homepage(){
-        return view('homepage');
+        $ourName = 'John Doe';
+        return view('homepage', ['name' => $ourName, 'catName' => 'Fluffy']);
     }
 
     public function aboutPage() {
